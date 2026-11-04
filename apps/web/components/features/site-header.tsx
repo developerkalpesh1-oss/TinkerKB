@@ -10,7 +10,6 @@ import {
   workspaceSectionFromPathname,
 } from "@/lib/workspace";
 import { useApp } from "@/components/features/app-shell";
-import { LanguageToggle } from "@/components/features/language-toggle";
 import { ThemeToggle } from "@/components/features/theme-toggle";
 import { WindowModeToggle } from "@/components/features/window-mode-toggle";
 import {
@@ -92,7 +91,6 @@ export function SiteHeader() {
         >
           {t("exploreMode")}
         </Button>
-        <LanguageToggle />
         <ThemeToggle />
         <WindowModeToggle
           enabled={windowScalingEnabled}

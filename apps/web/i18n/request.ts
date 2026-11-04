@@ -1,20 +1,10 @@
-import { cookies, headers } from "next/headers";
 import { getRequestConfig } from "next-intl/server";
 
-import {
-  defaultLocale,
-  isAppLocale,
-  localeCookieName,
-  localeFromAcceptLanguage,
-} from "@/i18n/config";
+import { defaultLocale } from "@/i18n/config";
 
+// TinkerKB is English-only: ignore any saved locale cookie or Accept-Language.
 export default getRequestConfig(async () => {
-  const cookieStore = await cookies();
-  const headerStore = await headers();
-  const savedLocale = cookieStore.get(localeCookieName)?.value;
-  const locale = isAppLocale(savedLocale)
-    ? savedLocale
-    : localeFromAcceptLanguage(headerStore.get("accept-language")) || defaultLocale;
+  const locale = defaultLocale;
 
   return {
     locale,

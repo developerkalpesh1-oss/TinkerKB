@@ -3,13 +3,12 @@
 import * as React from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
-import { ArrowRight, Github, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 
 import { api, ApiError } from "@/lib/api";
 import { setToken } from "@/lib/auth";
 import { PRODUCT_NAME } from "@/lib/branding";
-import { LanguageToggle } from "@/components/features/language-toggle";
 import { ThemeToggle } from "@/components/features/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { Field, FieldLabel } from "@/components/ui/field";
@@ -74,17 +73,16 @@ export default function LaunchPage() {
           <span className="font-display text-sm font-semibold">{PRODUCT_NAME}</span>
         </div>
         <div className="flex items-center gap-1">
-          <LanguageToggle className="bg-background/68 shadow-soft backdrop-blur-md" />
           <ThemeToggle />
           <a
-            href="https://github.com/Zleap-AI/SAG"
+            href="https://www.kalpeshmhase.com/"
             target="_blank"
             rel="noreferrer"
             className="inline-flex h-9 items-center gap-2 rounded-md border bg-background/68 px-3 text-xs font-medium text-muted-foreground shadow-soft outline-none backdrop-blur-md transition-colors hover:bg-background hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring"
           >
-            <Github className="size-4" />
-            <span className="hidden sm:inline">Zleap-AI/SAG</span>
-            <span className="sm:hidden">GitHub</span>
+            <Sparkles className="size-4" />
+            <span className="hidden sm:inline">Tinkerism</span>
+            <span className="sm:hidden">Tinkerism</span>
           </a>
         </div>
       </header>
@@ -187,6 +185,9 @@ export default function LaunchPage() {
           </form>
         </div>
       </section>
+      <footer className="relative z-20 pb-1 text-center font-display text-xs uppercase tracking-widest text-muted-foreground">
+        © {new Date().getFullYear()} Tinkerism · {PRODUCT_NAME}
+      </footer>
     </main>
   );
 }

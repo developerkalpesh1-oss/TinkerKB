@@ -250,7 +250,8 @@ class SearchContextTool(Tool):
         persona = ctx.persona or {}
         strategy = knowledge_search_strategy(persona, getattr(ctx.engine_manager, "_settings", settings))
         top_k = args.get("top_k") or persona.get("top_k")
-        limit = max(1, min(int(top_k or 8), 50))
+        # Deep retrieval: never fewer than 12 evidence sections, default 20.
+        limit = max(12, min(int(top_k or 20), 50))
         source_refs = {s.sag_source_config_id: {"id": s.id, "name": s.name} for s in ctx.sources}
         sources_by_config = {source.sag_source_config_id: source for source in ctx.sources}
         retrieval = retrieve_relevant_sections(

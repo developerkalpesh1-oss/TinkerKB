@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "description": "Upload knowledge, create assistants, and chat with citations · Open-source knowledge assistant platform"
+    "description": "TinkerKB by Tinkerism · Upload knowledge, build assistants, and chat with citations"
   },
   "Common": {
     "cancel": "Cancel",
@@ -139,7 +139,7 @@
     "freshTitle": "Create a fresh knowledge base",
     "freshSummary": "Back up existing data, keep your account and model settings, and upload documents into a fresh workspace.",
     "confirmTitle": "Confirm again",
-    "freshConfirmation": "After confirmation, SAG will back up existing data, keep your account and model settings, and create a fresh workspace. Previous knowledge bases, documents, agents, conversations and related task records will no longer appear in SAG. Upload your documents again. Previous data is preserved for manual recovery; automatic merging is not supported.",
+    "freshConfirmation": "After confirmation, TinkerKB will back up existing data, keep your account and model settings, and create a fresh workspace. Previous knowledge bases, documents, agents, conversations and related task records will no longer appear in TinkerKB. Upload your documents again. Previous data is preserved for manual recovery; automatic merging is not supported.",
     "preservedPath": "Preserved legacy knowledge base",
     "back": "Back to choices",
     "confirm": "Confirm and start",
@@ -285,7 +285,7 @@
     "creating": "Creating…",
     "create": "Create source",
     "new": "New source",
-    "dialogDescription": "Sources hold content. After creation, upload documents and SAG will parse, chunk, and extract events automatically.",
+    "dialogDescription": "Sources hold content. After creation, upload documents and TinkerKB will parse, chunk, and extract events automatically.",
     "updated": "Source updated",
     "updateFailed": "Failed to update source",
     "edit": "Edit source",
@@ -397,7 +397,7 @@
     "cancellingRemaining": "Files not yet started will be cancelled.",
     "retryFailed": "Retry failed",
     "emptyFolder": "The selected folder contains no files.",
-    "relativePathsNotSent": "Relative folder paths are used only for review and are never sent to SAG.",
+    "relativePathsNotSent": "Relative folder paths are used only for review and are never sent to TinkerKB.",
     "uploadFailed": "Upload failed",
     "uploadComplete": "{succeeded, number} succeeded, {failed, number} failed, {cancelled, number} cancelled.",
     "completeTitle": "Folder upload complete",
@@ -413,7 +413,7 @@
     }
   },
   "SyncPanel": {
-    "started": "Sync started. SAG is fetching pages in the background.",
+    "started": "Sync started. TinkerKB is fetching pages in the background.",
     "failed": "Sync failed",
     "title": "Web sync",
     "description": "Fetch pages configured for this source, parse and index them, and extract events. Sync again any time to get updates.",
@@ -484,7 +484,7 @@
     "retry": "Retry",
     "emptyTitle": "No sources yet",
     "emptyCompactDescription": "Create a source and upload material to use it in search and chat.",
-    "emptyDescription": "Create a source and upload documents. SAG will index the content for search and chat.",
+    "emptyDescription": "Create a source and upload documents. TinkerKB will index the content for search and chat.",
     "viewAria": "View",
     "gridView": "Card view",
     "listView": "List view",
@@ -524,7 +524,7 @@
     "list": "List",
     "graph2dView": "2D graph view",
     "graph3dView": "3D graph view",
-    "emptyDocumentsDescription": "Add a document from the upper-right. SAG will parse, chunk, vectorize, and extract events and entities automatically.",
+    "emptyDocumentsDescription": "Add a document from the upper-right. TinkerKB will parse, chunk, vectorize, and extract events and entities automatically.",
     "addDialogDescription": "The document will be parsed, chunked, and processed for events and entities automatically.",
     "syncDialogDescription": "Fetch the latest connector content and update this source.",
     "sourceGone": "This source no longer exists",
@@ -536,7 +536,7 @@
     "importReady": "Imported the .octx package. The source list has been refreshed.",
     "importDecisionRequired": "The package conflicts with an existing source. Resolve it later from the source list.",
     "importFailed": "Import failed",
-    "importStarted": "Import started. You can leave this page and keep using SAG.",
+    "importStarted": "Import started. You can leave this page and keep using TinkerKB.",
     "importTasksTitle": "OCTX import tasks",
     "importCancel": "Cancel import",
     "importDismiss": "Dismiss",
@@ -759,7 +759,7 @@
     "loadErrorTitle": "Failed to load",
     "retry": "Retry",
     "deploymentLockTitle": "Generation settings are managed by deployment",
-    "deploymentLockDescription": "This deployment locks LLM settings through SAG_LOCK_LLM_CONFIG. Update Docker Compose or .env and restart SAG to change them.",
+    "deploymentLockDescription": "This deployment locks LLM settings through SAG_LOCK_LLM_CONFIG. Update Docker Compose or .env and restart TinkerKB to change them.",
     "generationTitle": "Generation model",
     "generationLoading": "Loading the model connection.",
     "embeddingTitle": "Embedding model",
@@ -957,8 +957,8 @@
   },
   "McpService": {
     "title": "Knowledge MCP",
-    "description": "Connect the SAG knowledge base to external AI clients.",
-    "fullDescription": "Connect the entire SAG knowledge base to external AI clients.",
+    "description": "Connect the TinkerKB knowledge base to external AI clients.",
+    "fullDescription": "Connect the entire TinkerKB knowledge base to external AI clients.",
     "loadFailed": "Unable to load integration settings",
     "serviceConfig": "Service configuration",
     "loadErrorTitle": "Failed to load",
@@ -979,13 +979,13 @@
   },
   "DshService": {
     "title": "DeepSeek Harness",
-    "connectionReady": "Start SAG, install the plugin, and DeepSeek Harness discovers the local knowledge connection automatically.",
+    "connectionReady": "Start TinkerKB, install the plugin, and DeepSeek Harness discovers the local knowledge connection automatically.",
     "loadFailed": "Unable to check the local connection",
     "loadErrorTitle": "Connection check failed",
     "retry": "Retry",
     "checking": "Checking the local connection…",
     "installPlugin": "Install plugin",
-    "installDescription": "With SAG running, install the plugin once in DeepSeek Harness.",
+    "installDescription": "With TinkerKB running, install the plugin once in DeepSeek Harness.",
     "defaultKnowledge": "Default knowledge base",
     "defaultKnowledgeDescription": "Use this knowledge base when a request does not choose one.",
     "noDefaultSource": "Not set (searches all; choose when writing)",
@@ -1518,7 +1518,7 @@
     "extractedEvent": "Extracted event"
   },
   "KnowledgeUniverse": {
-    "aria": "SAG dynamic knowledge universe",
+    "aria": "TinkerKB dynamic knowledge universe",
     "nodeKinds": {
       "source": "Source",
       "event": "Event",

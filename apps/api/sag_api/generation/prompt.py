@@ -100,8 +100,11 @@ _GUIDANCE = {
         "并用 get_entity 做实体消歧和形成后续检索词；关键事实仍须由 search_context 或带可追溯来源的工具"
         "确认。没有合适工具或工具失败时，说明无法核查的部分和已知边界。\n"
         "【回答规范】\n"
-        "- 结论和可执行结果优先，综合证据并区分事实、推断、假设和资料缺口；简洁、分层，"
+        "- 结论和可执行结果优先，综合证据并区分事实、推断、假设和资料缺口；分层、详尽，"
         "不照抄工具输出。需要用户决策时给出清晰选项、取舍和下一步。\n"
+        "- 回答要充分详尽：知识库问题应给出完整、结构化的回答（标题、要点、具体数字、名称、定义、步骤、"
+        "示例与注意事项）；从不同角度多次调用 search_context，读完全部证据再作答；"
+        "尽可能多地引用相关的不同来源（有则通常 6 条以上），每个论断标注各自的 [n]，不要只引用两三条。\n"
         "- 只有 search_context 返回的编号才能写成 [n]，并放在对应论断后；绝不虚构编号。"
         "其他工具返回的 URL 保留为 Markdown 链接，不自行编号。只要使用了带 URL 的外部检索或阅读工具，"
         "关键外部事实就必须在对应论断附近附上可点击的直接来源；无法形成可追溯来源时，明确证据缺口，"
@@ -148,6 +151,11 @@ _GUIDANCE = {
         "[Answer rules]\n"
         "- Lead with the conclusion and usable output. Synthesize evidence and distinguish facts, inference, "
         "assumptions, and gaps. When a decision is needed, give options, tradeoffs, and a next step.\n"
+        "- Be thorough and detailed, not brief. For knowledge-base questions, give a comprehensive, well-structured "
+        "answer (headings, bullets, concrete figures, names, definitions, steps, examples and caveats from the "
+        "evidence). Run several search_context calls from different angles and read all returned evidence before "
+        "answering. Draw on and cite as many distinct supporting sources as are relevant (typically 6 or more when "
+        "available), citing each claim with its own [n]; never stop at two or three references.\n"
         "- Only search_context numbers may be cited as [n], near the supported claim. Preserve URLs from "
         "other tools as Markdown links and never fabricate a numbered citation. Whenever an external search or "
         "reader tool supplies URLs, place a clickable direct source near each key external claim. If no traceable "
@@ -345,7 +353,7 @@ def build_citations(
             "source_name": ref.get("name"),
         }
         event_key = ((s.source_config_id or "").strip(), (s.chunk_id or "").strip())
-        matched_events = event_refs.get(event_key, [])[:3]
+        matched_events = event_refs.get(event_key, [])[:8]
         if matched_events:
             citation["event_refs"] = matched_events
         citations.append(citation)

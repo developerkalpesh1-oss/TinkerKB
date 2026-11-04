@@ -297,7 +297,7 @@ class Settings(BaseSettings):
     # multi_es_fast：默认策略。相关率平均比 vector 高 ~14 个百分点；
     # vector store 不支持 lexical(pgvector/oceanbase) 时由 engine_manager 自动降级为 vector。
     search_strategy: SearchStrategy = "multi_es_fast"
-    search_top_k: int = 8
+    search_top_k: int = 15
     # 全库检索先选有界信源候选；@ 显式范围同样受此硬上限保护。
     search_source_candidate_limit: int = Field(default=16, ge=1, le=256)
     search_source_concurrency: int = Field(default=4, ge=1, le=32)

@@ -2,7 +2,7 @@ export const locales = ["zh-CN", "en-US"] as const;
 
 export type AppLocale = (typeof locales)[number];
 
-export const defaultLocale: AppLocale = "zh-CN";
+export const defaultLocale: AppLocale = "en-US";
 export const localeCookieName = "sag_locale";
 export const localeCookieMaxAge = 60 * 60 * 24 * 365;
 

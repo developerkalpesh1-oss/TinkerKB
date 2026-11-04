@@ -121,7 +121,7 @@ QUICK_SETUP_302 = {
     "document_chunk_mode": "standard",
     "document_extraction_profile": "standard",
     "search_strategy": "multi_es_fast",
-    "search_top_k": 8,
+    "search_top_k": 15,
     "sag_language": "zh",
 }
 

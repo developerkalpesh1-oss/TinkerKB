@@ -804,7 +804,7 @@ def test_prompt_and_citations():
     ]
     msgs = build_messages("谁创立了 Acme？", sections, language="zh")
     assert msgs[0]["role"] == "system"
-    assert "Zleap" in msgs[0]["content"] and "你是 sag" not in msgs[0]["content"]
+    assert "Tinker" in msgs[0]["content"] and "你是 sag" not in msgs[0]["content"]
     assert "[1]" in msgs[-1]["content"] and "Acme" in msgs[-1]["content"]
     cites = build_citations(
         sections,

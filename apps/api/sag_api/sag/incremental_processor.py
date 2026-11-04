@@ -96,6 +96,9 @@ def document_extraction_options(
         raise RuntimeError(f"不支持的抽取提示词语言: {language!r}")
     return ExtractionOptions(
         source_type="article", contract="rich",
+        # One malformed event (e.g. zero entities from the LLM) must not reject the
+        # whole document batch: drop just that event and keep the valid ones.
+        on_contract_violation="drop_event",
         limits=ExtractionLimits(
             max_events_per_chunk=20, min_entities_per_event=1,
             max_entities_per_event=max_entities_per_event,
